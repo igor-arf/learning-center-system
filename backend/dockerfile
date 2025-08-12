@@ -1,0 +1,48 @@
+# Dockerfile (для Django backend)
+FROM python:3.11
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /app
+
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . /app/
+
+RUN python manage.py collectstatic --noinput
+
+EXPOSE 8000
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "learning_center_project.wsgi:application"]
+
+
+# .env.example
+# Django settings
+SECRET_KEY=your-secret-key-here
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+# Database
+DB_NAME=learning_center_db
+DB_USER=postgres
+DB_PASSWORD=password
+DB_HOST=localhost
+DB_PORT=5432
+
+# Redis
+REDIS_URL=redis://localhost:6379/0
+
+# Email settings (optional)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
+
+# SMS settings (optional)
+SMS_API_KEY=your-sms-api-key
+SMS_PROVIDER_URL=https://api.sms-provider.com/send
+
+# Notification email
+NOTIFICATION_EMAIL=admin@learningcenter.com

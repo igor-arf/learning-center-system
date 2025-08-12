@@ -1,0 +1,40 @@
+# package.json (для React frontend)
+{
+  "name": "learning-center-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Learning Center Management System",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0",
+    "typescript": "^5.2.2",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.5",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "lucide-react": "^0.292.0",
+    "axios": "^1.6.0",
+    "date-fns": "^2.30.0",
+    "@headlessui/react": "^1.7.17",
+    "react-hook-form": "^7.47.0",
+    "react-query": "^3.39.3",
+    "recharts": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-config-next": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.7"
+  }
+}
+
