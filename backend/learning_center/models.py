@@ -15,6 +15,24 @@ class User(AbstractUser):
     role = models.CharField(max_length=20, choices=UserRole.choices)
     phone = models.CharField(max_length=15, blank=True)
     
+    # эти поля для разрешения конфликтов
+    groups = models.ManyToManyField(
+        'auth.Group',  # Изменено на строковую ссылку
+        verbose_name='groups',
+        blank=True,
+        help_text='The groups this user belongs to.',
+        related_name="custom_user_set",
+        related_query_name="custom_user",
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',  # Изменено на строковую ссылку
+        verbose_name='user permissions',
+        blank=True,
+        help_text='Specific permissions for this user.',
+        related_name="custom_user_set",
+        related_query_name="custom_user",
+    )    
+    
 class Branch(models.Model):
     """Модель филиала учебного центра"""
     name = models.CharField(max_length=100)

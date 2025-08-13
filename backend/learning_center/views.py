@@ -9,6 +9,8 @@ from datetime import datetime, timedelta
 from .services.schedule_generator import ScheduleGenerator
 from .services.rotation_manager import RotationManager
 from .services.conflict_resolver import ConflictResolver
+from .models import *
+from .serializers import *
 import logging
 
 logger = logging.getLogger(__name__)

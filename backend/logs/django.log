@@ -1,0 +1,8 @@
+INFO 2025-08-12 22:47:16,144 autoreload 8701 126384165818496 Watching for file changes with StatReloader
+INFO 2025-08-12 22:49:10,676 autoreload 8701 126384165818496 /home/user/learning-center-system/backend/learning_center_project/wsgi.py changed, reloading.
+INFO 2025-08-12 22:49:11,109 autoreload 8741 138884201201792 Watching for file changes with StatReloader
+INFO 2025-08-12 22:50:14,702 autoreload 8757 127842646257792 Watching for file changes with StatReloader
+INFO 2025-08-12 22:51:26,274 autoreload 8776 129806829617280 Watching for file changes with StatReloader
+INFO 2025-08-12 22:53:02,829 autoreload 8787 131771631239296 Watching for file changes with StatReloader
+INFO 2025-08-12 22:54:03,089 autoreload 8798 125490689372288 Watching for file changes with StatReloader
+INFO 2025-08-12 23:27:23,723 autoreload 13922 126829070688384 Watching for file changes with StatReloader

@@ -1,7 +1,7 @@
-# package.json (для React frontend)
 {
   "name": "learning-center-frontend",
   "version": "1.0.0",
+  "proxy": "http://localhost:8000",
   "description": "Frontend for Learning Center Management System",
   "scripts": {
     "dev": "next dev",
